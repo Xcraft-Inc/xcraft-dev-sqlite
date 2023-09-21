@@ -54,8 +54,8 @@ function rebuild(bundlePath) {
     env: {
       ...process.env,
       npm_config_target: electronVersion,
-      npm_config_arch: 'x64',
-      npm_config_target_arch: 'x64',
+      npm_config_arch: process.arch,
+      npm_config_target_arch: process.arch,
       npm_config_runtime: 'electron',
       npm_config_disturl: 'https://electronjs.org/headers',
       npm_config_build_from_source: 'true',
